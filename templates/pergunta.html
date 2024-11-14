@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Pergunta do Teste de Personalidade</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Teste de Personalidade</h1>
+    <form action="{{ url_for('pergunta') }}" method="POST">
+        <p>{{ pergunta.texto }}</p>
+        {% for opcao in pergunta.opcoes %}
+        <label>
+            <input type="radio" name="resposta" value="{{ opcao }}" required> {{ opcao }}
+        </label><br>
+        {% endfor %}
+        <button type="submit">Próxima Pergunta</button>
+    </form>
+</div>
+</body>
+</html>

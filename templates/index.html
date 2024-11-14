@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste de Personalidade</title>
+</head>
+<body>
+<h1>Teste de Personalidade</h1>
+<form action="{{ url_for('submit') }}" method="POST">
+  {% for pergunta in perguntas %}
+  <p>{{ pergunta.texto }}</p>
+  {% for opcao in pergunta.opcoes %}
+  <label>
+    <input type="radio" name="resposta" value="{{ opcao }}"> {{ opcao }}
+  </label>
+  {% endfor %}
+  {% endfor %}
+  <button type="submit">Enviar</button>
+</form>
+</body>
+</html>
