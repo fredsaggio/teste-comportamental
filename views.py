@@ -6,5 +6,5 @@ def home():
     return render_template("inicio.html")
 
 @app.route('/perguntas')
-def destino():
-    return render_template('perguntas1.html')
+def perguntas():
+    return render_template('perguntas.html')
