@@ -17,32 +17,28 @@
             <form>
                 <label>
                   <input type="radio" name="opcao" value="1">
-                  resposta 1
+                  EU Sou brasileiro com muito orgulho, com muito amor!!!
                 </label>
                 <label>
                   <input type="radio" name="opcao" value="2">
-                  resposta 2
+                  Eu odeio o vital e por isso quero que ele seja demitido
                 </label>
                 <label>
                     <input type="radio" name="opcao" value="3">
-                    resposta 3
+                    Frase aleatória para testar o tamanho da div
                   </label>
                   <label>
                     <input type="radio" name="opcao" value="4">
-                    resposta 4
-                  </label>
-                  <label>
-                    <input type="radio" name="opcao" value="5">
-                    resposta 5
+                    Outra resposta
                   </label>
               </form>
-              <div class="div-proxima">
-                <form action="{{ url_for('resultado') }}" method="GET">
-                  <button id="btnProxima" type="submit">Próxima</button>
-              </form>  
-            </div>
         </div>
     </div>
     <h1 class="numero-da-pergunta">1ª</h1>
+    <div class="div-proxima">
+      <form action="{{ url_for('resultado') }}" method="GET">
+        <button id="btnProxima" type="submit">Próxima</button>
+      </form>  
+    </div>
 </body>
 </html>

@@ -59,35 +59,44 @@ body{
   form {
     color: #0079b6; 
     font-size: 30px;
-    text-align: center; /* Centraliza os textos */
-    display: flex; /* Flexbox para alinhar os rótulos na mesma linha */
-    justify-content: center; /* Centraliza as bolinhas e os textos */
-    gap: 10px;
-  }
-  
-  label {
-    margin-right: 10px; /* Espaçamento entre as opções */
+    text-align: left; /* Alinha os textos à esquerda */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Faz as respostas ficarem em coluna */
+    justify-content: flex-start; /* Alinha ao topo */
+    align-items: flex-start; /* Alinha os textos ao lado esquerdo */
+    gap: 10px; /* Espaçamento vertical entre as opções */
+    padding: 10px; /* Adiciona espaço interno para não encostar nas bordas */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+label {
+    margin-right: 10px; /* Espaçamento entre texto e a bolinha */
     display: flex;
     align-items: center; 
-  }
+    line-height: 1.5; /* Melhora a legibilidade com espaçamento entre as linhas */
+    word-wrap: break-word; /* Quebra as palavras grandes automaticamente */
+    width: 100%; /* Faz o texto ocupar toda a largura disponível */
+}
 
-  input[type="radio"] {
+input[type="radio"] {
     appearance: none;
-    width: 40px; /* Aumentei o tamanho */
-    height: 40px; /* Aumentei o tamanho */
+    width: 40px; 
+    height: 40px; 
     border: 2px solid #0079b6;
-    border-radius: 50%; /* Faz a bolinha */
+    border-radius: 50%; 
     background-color: transparent;
     position: relative; 
     cursor: pointer;
-  }
-  
-  input[type="radio"]:checked {
-    background-color: white; /* Cor da bolinha marcada */
-  }
-  input[type="radio"]::after {
+    margin-right: 10px; /* Espaçamento entre a bolinha e o texto */
+}
+
+input[type="radio"]:checked {
+    background-color: white; 
+}
+
+input[type="radio"]::after {
     content: '';
-    width: 18px; /* Tamanho do preenchimento interno */
+    width: 18px;
     height: 18px;
     background-color: #0079b6;
     border-radius: 50%;
@@ -95,30 +104,31 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none; /* Fica escondido até ser marcado */
-  }
-  
-  input[type="radio"]:checked::after {
-    display: block; /* Mostra o preenchimento quando marcado */
-  }
+    display: none;
+}
 
+input[type="radio"]:checked::after {
+    display: block;
+}
 .div-proxima{
     position: absolute;
     margin-top: 120px;
 }
 #btnProxima{
+    position: absolute;
     font-family: "Oswald", sans-serif;
     margin: 0;
-    margin-top: 20%;
+    margin-top: -60px;
+    margin-left: 900px;
     text-align: center;
     border: none;
-    border-radius: 12px;
+    border-radius: 20px;
     background: linear-gradient(90deg, #6bc1ec, #0091d9);
     color: white;
-    font-size: 20px;
-    padding: 10px 10px;
-    padding-top: 4px;
-    padding-bottom: 6px;
+    font-size: 40px;
+    padding: 20px 20px;
+    padding-top: 8px;
+    padding-bottom: 12px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
 }
