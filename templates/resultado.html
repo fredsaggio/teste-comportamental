@@ -17,6 +17,11 @@
         Analistas
     </h1>
   </div>
+
+  <form action="{{ url_for('grafico') }}" method="GET">
+    <button id="botão-grafico" type="submit">ir para o gráfico</button>
+  </form> 
+
   <div class="carrossel-container">
     <div class="carrossel">
       <div class="slide ativo" id="Definição">O Pensador estratégico

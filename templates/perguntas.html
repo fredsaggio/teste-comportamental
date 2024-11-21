@@ -37,9 +37,9 @@
                   </label>
               </form>
               <div class="div-proxima">
-                <a href="">
-                    <button id="btnProxima">Próxima</button> 
-                </a>
+                <form action="{{ url_for('resultado') }}" method="GET">
+                  <button id="btnProxima" type="submit">Próxima</button>
+              </form>  
             </div>
         </div>
     </div>

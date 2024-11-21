@@ -8,3 +8,11 @@ def home():
 @app.route("/perguntas")
 def perguntas():
     return render_template("perguntas.html")
+
+@app.route("/resultado")
+def resultado():
+    return render_template("resultado.html")
+
+@app.route("/grafico")
+def grafico():
+    return render_template("grafico.html")

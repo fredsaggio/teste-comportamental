@@ -96,3 +96,27 @@ body {
   transform: scale(1.1);
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.459);
   }
+
+  #botão-grafico{
+    position: absolute;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    margin-left: -11%;
+    margin-top: 42%;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #6bc1ec, #0091d9);
+    color: white;
+    font-size: 35px;
+    padding: 10px 70px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#botão-grafico:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.459);
+}
