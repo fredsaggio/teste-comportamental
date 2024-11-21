@@ -1,5 +1,6 @@
 class Pergunta:
-    def __init__(self, texto, respostas):
+    def __init__(self, titulo, texto, respostas):
+        self.titulo = titulo
         self.texto = texto
         self.respostas = respostas
 
