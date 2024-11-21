@@ -12,9 +12,9 @@
   <div class="Bloco-inicio">
     <h1 id="titulo2">Bem-vindo!</h1> 
     <h2 id="titulo-meio">Clique em começar e divirta-se</h2>
-    <a href="perguntas1.html">
-      <button id="login-button">Começar</button> 
-    </a>
+    <form action="{{ url_for('perguntas') }}" method="GET">
+      <button id="login-button" type="submit">Começar</button>
+  </form>  
     <img id="gif-animada" src="/static/images/brain-sides-animate.svg" alt="" width="460px">
   </div>
 </body>
