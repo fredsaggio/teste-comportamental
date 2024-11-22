@@ -153,7 +153,6 @@ def perguntas():
 
 @app.route("/resultado")
 def resultado():
-<<<<<<< HEAD
     persona = classe.Exploradores()
     imagem = persona.get_imagem()
     nome = persona.get_nome()
@@ -164,11 +163,6 @@ def resultado():
     negativo1 = persona.get_negativos()[0]
     negativo2 = persona.get_negativos()[1]
     return render_template("resultado.html", imagem = imagem, nome = nome, tipo = tipo, definicao = definicao, positivo1 = positivo1, negativo1 = negativo1, positivo2 = positivo2, negativo2 = negativo2)
-=======
-    resultado = teste.resultado_final()
-    return render_template("resultado.html", resultado=resultado)
->>>>>>> 3c41f4d4bbedce6b773ad8a0158b758939d22a6d
-
 @app.route("/grafico")
 def grafico():
     # Caso você tenha gráficos, como com Matplotlib ou outra ferramenta, implemente aqui
