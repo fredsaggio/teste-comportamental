@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from models.teste_comportamental import Teste
 from models import pergunta_class
+import classe
 
 app = Flask(__name__)
 
@@ -151,8 +152,13 @@ def perguntas():
 
 @app.route("/resultado")
 def resultado():
-    # Aqui você pode processar e mostrar os resultados do teste
-    return render_template("resultado.html", respostas=teste.respostas)
+    persona = classe.Exploradores()
+    nome = persona.get_nome()
+    tipo = persona.get_tipo()
+    definicao = persona.get_text()
+    positivo = persona.get_positivos()
+    negativo = persona.get_negativos()
+    return render_template("resultado.html", nome = nome, tipo = tipo, definicao = definicao, positivo = positivo, negativo = negativo)
 
 @app.route("/grafico")
 def grafico():

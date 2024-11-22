@@ -14,7 +14,7 @@
   </div>
   <div id="nome-resultado">
     <h1 id="result-h1">
-        Analistas
+        {{ tipo }}
     </h1>
   </div>
 
@@ -24,21 +24,14 @@
 
   <div class="carrossel-container">
     <div class="carrossel">
-      <div class="slide ativo" id="Definição">O Pensador estratégico
-          <p>sua abordagem estratégica e detalhista. 
-            Diante de um problema, eles analisam todos os cenários 
-            possíveis antes de tomar uma decisão. Para eles, 
-            o pensamento crítico é uma ferramenta indispensável, 
-            e a inovação é um objetivo constante.
-          </p>
+      <div class="slide ativo" id="Definição">{{ nome }}
+          <p>{{ definicao }}</p>
        </div>
       <div class="slide" id="Positivos">Pontos Positivos
-        <p>• São meticulosos na análise de cenários, garantindo decisões bem fundamentadas.</p>
-        <p>• Têm foco em inovação, tornando-os ideais para situações que exigem criatividade e visão a longo prazo.</p>
+        <p> {{ positivo }} </p>
       </div>
       <div class="slide" id="Negativos">Pontos Negativos
-        <p>•Podem demorar a agir por analisar demasiadamente os detalhes.</p>
-        <p>•Podem ser vistos como excessivamente críticos ao se concentrar em falhas.</p>
+        <p>{{ negativo }}</p>
       </div>
     </div>
     <button id="prev"><</button>
