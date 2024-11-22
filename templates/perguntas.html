@@ -9,36 +9,26 @@
     <title>TCP</title>
 </head>
 <body>
-    <div class="bloco">
-        <div class="metade cima">
-            <h1 class="Pergunta">Insira a pergunta</h1>
-        </div>
-        <div class="metade baixo">
-            <form>
-                <label>
-                  <input type="radio" name="opcao" value="1">
-                  EU Sou brasileiro com muito orgulho, com muito amor!!!
-                </label>
-                <label>
-                  <input type="radio" name="opcao" value="2">
-                  Eu odeio o vital e por isso quero que ele seja demitido
-                </label>
-                <label>
-                    <input type="radio" name="opcao" value="3">
-                    Frase aleatória para testar o tamanho da div
-                  </label>
-                  <label>
-                    <input type="radio" name="opcao" value="4">
-                    Outra resposta
-                  </label>
-              </form>
-        </div>
+<div class="bloco">
+    <div class="metade cima">
+        <h1 class="Pergunta">{{ pergunta.texto }}</h1>  <!-- Pergunta dinâmica -->
     </div>
-    <h1 class="numero-da-pergunta">1ª</h1>
-    <div class="div-proxima">
-      <form action="{{ url_for('resultado') }}" method="GET">
-        <button id="btnProxima" type="submit">Próxima</button>
-      </form>  
+    <div class="metade baixo">
+        <form action="{{ url_for('perguntas') }}" method="POST">
+            {% set i = 1 %}  <!-- Inicializa o contador -->
+            {% for opcao in pergunta.opcoes %}
+            <label>
+                <input type="radio" name="opcao" value="{{ i }}">
+                {{ opcao }}
+            </label>
+            {% set i = i + 1 %}  <!-- Incrementa o contador -->
+            {% endfor %}
+            <div class="div-proxima">
+                <button id="btnProxima" type="submit">Próxima</button>
+            </div>
+        </form>
     </div>
+</div>
+<h1 class="numero-da-pergunta">{{ numero_pergunta }}ª</h1>  <!-- Número da pergunta -->
 </body>
 </html>
