@@ -1,3 +1,4 @@
+# encoding: utf-8
 from random import randint
 
 class base():
@@ -17,6 +18,8 @@ class base():
         return self.pontos_fortes
     def get_negativos(self):
         return self.pontos_fracos
+    def get_imagem(self):
+        return self.url_imagen
     def teste(self):
         print(f"{self.get_tipo()}:{self.get_nome()}\n{self.get_text()}\n\nPontos forte:")
         for x in self.get_positivos():
@@ -31,7 +34,7 @@ class Analista(base):
     url_imagen = "static/images/Analista.svg"
     def __init__(self):
         x = randint(1, 5)
-        with open("banco_de_dados/" + self.tipo + ".txt", 'r') as arquivo:
+        with open("banco_de_dados/" + self.tipo + ".txt", 'r', encoding="utf-8") as arquivo:
             conteudo = arquivo.read()
         textos = conteudo.split("Texto ")
         partes = textos[x].split("\nPontos Positivos:\n")
@@ -47,7 +50,7 @@ class Diplomata(base):
     url_imagen = "static/images/diplomata.svg"
     def __init__(self):
         x = randint(1, 5)
-        with open("banco_de_dados/" + self.tipo + ".txt", 'r') as arquivo:
+        with open("banco_de_dados/" + self.tipo + ".txt", 'r', encoding="utf-8") as arquivo:
             conteudo = arquivo.read()
         textos = conteudo.split("Texto ")
         partes = textos[x].split("\nPontos Positivos:\n")
@@ -62,7 +65,7 @@ class Sentinelas(base):
     url_imagen = "static/images/sentinela.svg"
     def __init__(self):
         x = randint(1, 5)
-        with open("banco_de_dados/" + self.tipo + ".txt", 'r') as arquivo:
+        with open("banco_de_dados/" + self.tipo + ".txt", 'r', encoding="utf-8") as arquivo:
             conteudo = arquivo.read()
         textos = conteudo.split("Texto ")
         partes = textos[x].split("\nPontos Positivos:\n")
@@ -78,7 +81,7 @@ class Exploradores(base):
     url_imagen = "static/images/explorador.svg"
     def __init__(self):
         x = randint(1, 5)
-        with open("banco_de_dados/" + self.tipo + ".txt", 'r') as arquivo:
+        with open("banco_de_dados/" + self.tipo + ".txt", 'r', encoding="utf-8") as arquivo:
             conteudo = arquivo.read()
         textos = conteudo.split("Texto ")
         partes = textos[x].split("\nPontos Positivos:\n")

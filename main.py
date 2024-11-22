@@ -1,3 +1,4 @@
+# encoding: utf-8
 from flask import Flask, render_template, request, flash, redirect
 from models import pergunta_class 
 import classe

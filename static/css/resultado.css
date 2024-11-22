@@ -74,6 +74,10 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;;
   }
+  .paragrafo{
+    text-align: left;
+
+  }
   #bloco-gif{
     margin-top: 10%;
 }

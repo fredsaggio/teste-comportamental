@@ -1,3 +1,4 @@
+# encoding: utf-8
 from flask import Flask, render_template, request, redirect, url_for
 from models.teste_comportamental import Teste
 from models import pergunta_class
@@ -21,7 +22,7 @@ perguntas = [
     pergunta_class.Pergunta("Como você costuma reagir a mudanças de última hora?",
                             ["Reavalio tudo rapidamente e ajusto meu plano",
                              "Tento entender como todos estão se sentindo e adapto meu comportamento",
-                             "Encaro como uma oportunidade de }xperimentar algo diferente",
+                             "Encaro como uma oportunidade de experimentar algo diferente",
                              "Tento manter as coisas sob controle e seguir o que foi combinado"]),
 
     pergunta_class.Pergunta("O que você valoriza mais em um ambiente de trabalho?",
@@ -153,12 +154,15 @@ def perguntas():
 @app.route("/resultado")
 def resultado():
     persona = classe.Exploradores()
+    imagem = persona.get_imagem()
     nome = persona.get_nome()
     tipo = persona.get_tipo()
     definicao = persona.get_text()
-    positivo = persona.get_positivos()
-    negativo = persona.get_negativos()
-    return render_template("resultado.html", nome = nome, tipo = tipo, definicao = definicao, positivo = positivo, negativo = negativo)
+    positivo1 = persona.get_positivos()[0]
+    positivo2 = persona.get_positivos()[1]
+    negativo1 = persona.get_negativos()[0]
+    negativo2 = persona.get_negativos()[1]
+    return render_template("resultado.html", imagem = imagem, nome = nome, tipo = tipo, definicao = definicao, positivo1 = positivo1, negativo1 = negativo1, positivo2 = positivo2, negativo2 = negativo2)
 
 @app.route("/grafico")
 def grafico():
