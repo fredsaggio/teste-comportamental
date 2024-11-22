@@ -62,6 +62,7 @@ class Diplomata(base):
         self.text = texto.splitlines()[2]
 
 class Sentinelas(base):
+    tipo = "Sentinelas"
     url_imagen = "images/sentinela.svg"
     def __init__(self):
         x = randint(1, 5)
