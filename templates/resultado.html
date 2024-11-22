@@ -10,7 +10,7 @@
 </head>
 <body>
   <div id="bloco-gif">
-    <img id="gif-animada" src="/static/images/analista.svg" alt="" width="650px">
+    <img id="gif-animada" src="{{ url_for('static', filename=imagem) }}" alt="" width="650px">
   </div>
   <div id="nome-resultado">
     <h1 id="result-h1">
@@ -19,7 +19,7 @@
   </div>
 
   <form action="{{ url_for('grafico') }}" method="GET">
-    <button id="botão-grafico" type="submit">ir para o gráfico</button>
+    <button id="botão-grafico" type="submit">Refazer Teste</button>
   </form> 
 
   <div class="carrossel-container">

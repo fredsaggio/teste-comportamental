@@ -31,7 +31,7 @@ class base():
 
 class Analista(base):
     tipo = "Analista"
-    url_imagen = "static/images/Analista.svg"
+    url_imagen = "images/Analista.svg"
     def __init__(self):
         x = randint(1, 5)
         with open("banco_de_dados/" + self.tipo + ".txt", 'r', encoding="utf-8") as arquivo:
@@ -47,7 +47,7 @@ class Analista(base):
 
 class Diplomata(base):
     tipo = "Diplomata"
-    url_imagen = "static/images/diplomata.svg"
+    url_imagen = "images/diplomata.svg"
     def __init__(self):
         x = randint(1, 5)
         with open("banco_de_dados/" + self.tipo + ".txt", 'r', encoding="utf-8") as arquivo:
@@ -62,7 +62,7 @@ class Diplomata(base):
         self.text = texto.splitlines()[2]
 
 class Sentinelas(base):
-    url_imagen = "static/images/sentinela.svg"
+    url_imagen = "images/sentinela.svg"
     def __init__(self):
         x = randint(1, 5)
         with open("banco_de_dados/" + self.tipo + ".txt", 'r', encoding="utf-8") as arquivo:
@@ -78,7 +78,7 @@ class Sentinelas(base):
 
 class Exploradores(base):
     tipo = "Exploradores"
-    url_imagen = "static/images/explorador.svg"
+    url_imagen = "images/explorador.svg"
     def __init__(self):
         x = randint(1, 5)
         with open("banco_de_dados/" + self.tipo + ".txt", 'r', encoding="utf-8") as arquivo:
