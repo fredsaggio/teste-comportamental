@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@589&display=swap');
+
+body{
+    font-family: "Oswald", sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/rm222batch2-mind-03.jpg);
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#titulo1{
+    color: #0079b6;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    text-shadow: 0px 0px 10px #ffffff;
+
+
+}
+
+#titulo2{
+    color: #0091d9;
+    margin-top: -2%;
+    margin-bottom: 1%;
+    margin-left: 50%;
+    text-align: center;
+    font-size: 80px;
+    text-shadow: 0px 0px 10px #ffffff;
+
+}
+
+.Bloco-inicio{
+    width: 40%;
+    flex-direction: column;
+    background: radial-gradient(circle, #b9e5f971, #40b5e7af);
+    backdrop-filter: blur(7px);
+    padding: 5%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.411);
+
+
+}
+
+#titulo-meio{
+    background: linear-gradient(180deg, #0091d9, #00aeff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5vw;
+    margin: 0;
+    margin-left: 50%;
+    text-align: center;
+
+
+}
+
+#login-button{
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    margin-top: 20%;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #6bc1ec, #0091d9);
+    color: white;
+    font-size: 35px;
+    padding: 10px 70px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#login-button:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.459);
+    }
+
+#gif-animada{
+    position: absolute;
+    margin-top: -14%;
+    margin-left: -45%;
+}
