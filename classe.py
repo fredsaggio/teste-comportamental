@@ -6,6 +6,7 @@ class base():
     nome = "nome"
     pontos_fortes = []
     pontos_fracos = []
+    url_imagen = ""
     def get_tipo(self):
         return self.tipo
     def get_text(self):
@@ -27,6 +28,7 @@ class base():
 
 class Analista(base):
     tipo = "Analista"
+    url_imagen = "static/images/Analista.svg"
     def __init__(self):
         x = randint(1, 5)
         with open("banco_de_dados/" + self.tipo + ".txt", 'r') as arquivo:
@@ -42,6 +44,7 @@ class Analista(base):
 
 class Diplomata(base):
     tipo = "Diplomata"
+    url_imagen = "static/images/diplomata.svg"
     def __init__(self):
         x = randint(1, 5)
         with open("banco_de_dados/" + self.tipo + ".txt", 'r') as arquivo:
@@ -56,7 +59,7 @@ class Diplomata(base):
         self.text = texto.splitlines()[2]
 
 class Sentinelas(base):
-    tipo = "Sentinelas"
+    url_imagen = "static/images/sentinela.svg"
     def __init__(self):
         x = randint(1, 5)
         with open("banco_de_dados/" + self.tipo + ".txt", 'r') as arquivo:
@@ -72,6 +75,7 @@ class Sentinelas(base):
 
 class Exploradores(base):
     tipo = "Exploradores"
+    url_imagen = "static/images/explorador.svg"
     def __init__(self):
         x = randint(1, 5)
         with open("banco_de_dados/" + self.tipo + ".txt", 'r') as arquivo:
