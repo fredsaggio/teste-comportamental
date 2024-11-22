@@ -153,7 +153,19 @@ def perguntas():
 
 @app.route("/resultado")
 def resultado():
-    persona = classe.Exploradores()
+    # Obtenha o resultado final do teste
+    resultado_final = teste.resultado_final()
+
+    # Instanciar a classe correspondente ao resultado
+    if resultado_final == 'Explorador':
+        persona = classe.Exploradores()
+    elif resultado_final == 'Analista':
+        persona = classe.Analista()  # Adicione o restante das classes, se necessário
+    elif resultado_final == 'Diplomata':
+        persona = classe.Diplomata()
+    else:  # 'Sentinela'
+        persona = classe.Sentinelas()
+
     imagem = persona.get_imagem()
     nome = persona.get_nome()
     tipo = persona.get_tipo()
@@ -162,7 +174,18 @@ def resultado():
     positivo2 = persona.get_positivos()[1]
     negativo1 = persona.get_negativos()[0]
     negativo2 = persona.get_negativos()[1]
-    return render_template("resultado.html", imagem = imagem, nome = nome, tipo = tipo, definicao = definicao, positivo1 = positivo1, negativo1 = negativo1, positivo2 = positivo2, negativo2 = negativo2)
+
+    # Passar o resultado para o template
+    return render_template("resultado.html",
+                           imagem=imagem,
+                           nome=nome,
+                           tipo=tipo,
+                           definicao=definicao,
+                           positivo1=positivo1,
+                           negativo1=negativo1,
+                           positivo2=positivo2,
+                           negativo2=negativo2,
+                           resultado=resultado_final)  # Adicionar o resultado aqui
 @app.route("/grafico")
 def grafico():
     # Caso você tenha gráficos, como com Matplotlib ou outra ferramenta, implemente aqui

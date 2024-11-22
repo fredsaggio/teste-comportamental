@@ -15,14 +15,25 @@
     </div>
     <div class="metade baixo">
         <form action="{{ url_for('perguntas') }}" method="POST">
-            {% set i = 1 %}  <!-- Inicializa o contador -->
-            {% for opcao in pergunta.opcoes %}
             <label>
-                <input type="radio" name="opcao" value="{{ i }}">
-                {{ opcao }}
+                <input type="radio" name="opcao" value="1">
+                {{ pergunta.opcoes[0] }}
             </label>
-            {% set i = i + 1 %}  <!-- Incrementa o contador -->
-            {% endfor %}
+
+            <label>
+                <input type="radio" name="opcao" value="2">
+                {{ pergunta.opcoes[1] }}
+            </label>
+
+            <label>
+                <input type="radio" name="opcao" value="3">
+                {{ pergunta.opcoes[2] }}
+            </label>
+
+            <label>
+                <input type="radio" name="opcao" value="4">
+                {{ pergunta.opcoes[3] }}
+            </label>
             <div class="div-proxima">
                 <button id="btnProxima" type="submit">Próxima</button>
             </div>

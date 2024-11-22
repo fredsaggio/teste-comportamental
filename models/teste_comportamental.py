@@ -17,15 +17,22 @@ class Teste:
 
     def responder(self, resposta):
         self.respostas.append(resposta)
+
         # Mapeamento da resposta para o arquétipo
-        if resposta == '1':
-            self.pontuacoes['Analista'] += 1
-        elif resposta == '2':
-            self.pontuacoes['Diplomata'] += 1
-        elif resposta == '3':
-            self.pontuacoes['Explorador'] += 1
-        elif resposta == '4':
-            self.pontuacoes['Sentinela'] += 1
+        mapeamento_resposta_para_arquétipo = {
+            '1': 'Analista',
+            '2': 'Diplomata',
+            '3': 'Explorador',
+            '4': 'Sentinela'
+        }
+
+        # Verifica o arquétipo da resposta
+        arquétipo = mapeamento_resposta_para_arquétipo.get(resposta)
+
+        if arquétipo:
+            self.pontuacoes[arquétipo] += 1
+
+        # Avançar para a próxima pergunta
         self.indice_atual += 1
 
     def is_finalizado(self):
