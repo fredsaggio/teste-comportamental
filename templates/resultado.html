@@ -14,11 +14,11 @@
   </div>
   <div id="nome-resultado">
     <h1 id="result-h1">
-        Você é {{ resultado }}
+        {{ resultado }}
     </h1>
   </div>
 
-  <form action="{{ url_for('grafico') }}" method="GET">
+  <form action="{{ url_for('home') }}" method="GET">
     <button id="botão-grafico" type="submit">Refazer Teste</button>
   </form> 
 
