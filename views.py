@@ -151,8 +151,8 @@ def perguntas():
 
 @app.route("/resultado")
 def resultado():
-    # Aqui você pode processar e mostrar os resultados do teste
-    return render_template("resultado.html", respostas=teste.respostas)
+    resultado = teste.resultado_final()
+    return render_template("resultado.html", resultado=resultado)
 
 @app.route("/grafico")
 def grafico():
